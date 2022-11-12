@@ -30,10 +30,23 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Brotogeris.jpg"
             }
+          },
+          "d142a716-8441-4769-b46b-290aa0dfeba7": {
+            "type": "image",
+            "settings": {
+            }
+          },
+          "371a0d56-d71f-4d1f-b90f-bbc70eea2932": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/barred_parakeet.jpg"
+            }
           }
         },
         "block_order": [
-          "56bdf8a9-d67c-4a27-be34-0a8aadf90fea"
+          "56bdf8a9-d67c-4a27-be34-0a8aadf90fea",
+          "d142a716-8441-4769-b46b-290aa0dfeba7",
+          "371a0d56-d71f-4d1f-b90f-bbc70eea2932"
         ],
         "settings": {
         }
