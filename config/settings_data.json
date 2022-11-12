@@ -21,6 +21,22 @@
         "type": "featured-collection",
         "settings": {
         }
+      },
+      "gallery": {
+        "type": "gallery",
+        "blocks": {
+          "56bdf8a9-d67c-4a27-be34-0a8aadf90fea": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Brotogeris.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "56bdf8a9-d67c-4a27-be34-0a8aadf90fea"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
