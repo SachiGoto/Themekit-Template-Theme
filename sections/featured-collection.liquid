@@ -1,5 +1,5 @@
 
-{%  assign collection = section.settings.collection %}
+{%  assign collection = collections[section.settings.collection] %}
  {%- for product in collection.products -%}
          {% include 'product-item' %}
     {%- comment -%}
