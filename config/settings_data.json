@@ -1,6 +1,34 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      },
+      "181e5b49-950e-4a10-a060-7b1b45978d3b": {
+        "type": "featured-collection",
+        "settings": {
+        }
+      },
+      "5d2de136-2b97-49bb-9b06-95bec495e267": {
+        "type": "featured-collection",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+      "5d2de136-2b97-49bb-9b06-95bec495e267",
+      "181e5b49-950e-4a10-a060-7b1b45978d3b"
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {
+    }
   }
 }
