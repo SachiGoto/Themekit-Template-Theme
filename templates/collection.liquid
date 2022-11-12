@@ -1,0 +1,45 @@
+{%- comment -%}
+  {% layout 'theme.alternate' %}
+{%- endcomment -%}
+
+
+
+{% paginate collection.products by 5 %}
+
+  <h1>{{ collection.title }}</h1>
+  {%- for product in collection.products -%}
+    <div>
+
+      <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+
+      {%- comment -%}
+        within:collection include which collection the item come from 
+        returns <a href="/collections/all/products/<name of the product>"
+      {%- endcomment -%}
+      {{ product.price | money }}
+
+      {% unless product.available%}
+        <br><strong>sold out</strong>
+      {% endunless %}
+
+      <a href="{{product.url | withing:collection}}">
+        <img src="{{product.featured_image.src | img_url: "200x"}}" alt="{{product.featured_image.alt | escape}}">
+      </a>
+
+    </div>
+    {%- comment -%}
+      else here means when there is on products
+    {%- endcomment -%}
+  {% else %}
+    <p>no matches</p>
+  {% endfor %}
+
+
+  {%- comment -%}
+    <a href="{{ product.url }}">{{ product.title }}</a>
+    <a href='/products/<name of the product>'
+  {%- endcomment -%}
+  {% if paginate.pages > 1 %}
+    {{paginate | default_pagination}}
+  {% endif %}
+{% endpaginate %}
