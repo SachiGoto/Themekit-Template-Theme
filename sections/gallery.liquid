@@ -1,3 +1,14 @@
+<div class ="gallery">
+
+  {% for block in section.blocks %}
+    {{ block.settings.image }}
+    {% endfor %}
+
+
+</div>
+
+
+
 {% schema %}
   {
     "name": "Section name",
