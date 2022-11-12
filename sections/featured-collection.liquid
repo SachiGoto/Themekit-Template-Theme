@@ -1,25 +1,7 @@
 
 {%  assign collection = collections["featured-collection"] %}
  {%- for product in collection.products -%}
-    <div>
-
-      <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-
-      {%- comment -%}
-        within:collection include which collection the item come from 
-        returns <a href="/collections/all/products/<name of the product>"
-      {%- endcomment -%}
-      {{ product.price | money }}
-
-      {% unless product.available%}
-        <br><strong>sold out</strong>
-      {% endunless %}
-
-      <a href="{{product.url | withing:collection}}">
-        <img src="{{product.featured_image.src | img_url: "200x"}}" alt="{{product.featured_image.alt | escape}}">
-      </a>
-
-    </div>
+         {% include 'product-item' %}
     {%- comment -%}
       else here means when there is on products
     {%- endcomment -%}
