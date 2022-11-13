@@ -12,23 +12,46 @@
 
 
 {% schema %}
-  {
-    "name": "Gallery",
-    "settings": [],
-    "blocks":[
-      {
-        "type":"image",
-        "name": "Image Block",
-         "settings":[
-           {
-             "type":"image_picker",
-             "id":"image",
-             "label":"Image"
-           }
-         ]
-      }
-    ]
-  }
+   {
+ 	"name": "Gallery",
+ 	"settings": [{
+ 		"type": "select",
+ 		"id": "per-roow",
+ 		"label": "Images per row",
+ 		"options": [{
+ 				"value": "50%",
+ 				"label": "2 per row"
+ 			},
+ 			{
+ 				"value": "33%",
+ 				"label": "3 per row"
+ 			},
+ 			{
+ 				"value": "25%",
+ 				"label": "4 per row"
+ 			},
+ 			{
+ 				"value": "20%",
+ 				"label": "5 per row"
+ 			}
+
+ 		],
+ 		"default": "33%"
+
+ 	}],
+ 	"blocks": [{
+ 		"type": "image",
+ 		"name": "Image Block",
+ 		"settings": [
+
+ 			{
+ 				"type": "image_picker",
+ 				"id": "image",
+ 				"label": "Image"
+ 			}
+ 		]
+ 	}]
+ }
 {% endschema %}
 
 {% style %}
