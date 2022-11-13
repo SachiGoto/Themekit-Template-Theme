@@ -2,9 +2,7 @@
 
   {% for block in section.blocks %}
     <div class="image-wrap" style="background-image:url('{{ block.settings.image | img_url:'500x'}}');
-         width:500px;
-        height:500px;
-         background-size:cover;
+        
       
       
       
@@ -40,8 +38,12 @@
 
 {% style %}
 
-.gallery{
-  display:flex;
+
+
+.image-wrap{
+        display:inline-block;
+        width:100%;
+         background-size:cover;
 }
   
    
