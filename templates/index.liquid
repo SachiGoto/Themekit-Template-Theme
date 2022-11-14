@@ -81,8 +81,9 @@ Best way is to create a collection. Collection is an array with objects inside. 
 {%  assign colorsArray = "blue#green"| split:'#' %}
 
 {% for item in itemsArray %}
-  
+   {{ item }}
     {{ colorsArray[forloop.index0] }}
+  <br>
   
   {% endfor %}
 
