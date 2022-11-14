@@ -87,4 +87,17 @@ Best way is to create a collection. Collection is an array with objects inside. 
   
   {% endfor %}
 
+<h3> Comparison / Creating booleans</h3>
+
+  {%  assign true_or_false = ("Hello" == "Hello") %}
+
+  {%  if true_or_false %}
+    hello does equal hello!
+  {% else %}
+    hello doesn't equl hello?
+  {%  endif %}
+  
+
+  
+
 
