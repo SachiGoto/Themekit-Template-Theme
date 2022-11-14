@@ -49,9 +49,10 @@ Best way is to create a collection. Collection is an array with objects inside. 
     {{ product.title }}| {{ product.description }}
     {%  if forloop.last == false %} :: {% endif %}
   {%  endfor %}
+  
 {% endcapture %}
 
-
+<h3>Product list</h3>
 {{ product_list }}
 
 <!-- {% assign products_array = products_list | split: '::' %}
