@@ -16,7 +16,18 @@ Full Name: {{ first_name }} {{ last_name }}
 
 {%  assign youtube_video_url = "https://www.youtube.com/watch?v=PD-dx92RJtg" %}
 
-{{ youtube_video_url }}
+{%  if youtube_video_url contains 'youtube.com/watch' %}
+
+{% assign video_id = youtube_video_url |split: 'v=' %}
+  {% if youtbe_vidoe_url contains '&' %}
+    {%  assign video_id = video_id[1] | split : '&' | first %}
+{% else %}
+    {%  assign video_id = video_if[1] %}
+{%  endif %}
+
+<iframe src ="//www.youtube.com/embed/{{ video_id }}?rel=0&showinfo=0&vq=720" width="425" height="0" frameborder="0" allowfullscreen>
+
+{% endif %}
 
 
 
