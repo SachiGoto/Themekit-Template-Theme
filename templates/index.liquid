@@ -48,7 +48,7 @@ Best way is to create a collection. Collection is an array with objects inside. 
   {%  for product in collection.products %}
     {{ product.title }} | {{ product.featured.image.src | product_ima_url:'medium' }}
     
-    {%  if forloop.last == false %} :: {% endif %}
+    {%  if forloop.last == true %} :: {% endif %}
   {%  endfor %}
   
 {% endcapture %}
