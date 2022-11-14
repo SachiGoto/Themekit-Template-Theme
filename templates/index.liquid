@@ -74,3 +74,16 @@ Best way is to create a collection. Collection is an array with objects inside. 
 {{ product_vals }}
 
 
+
+<!-- Another example -->
+
+{%  assign itemsArray = "item1#item2" | split:'#' %}
+{%  assign colorsArray = "blue#green"| split:'#' %}
+
+{% for item in itemsArray %}
+  {% if item == 'item1' %}
+    {{ colorsArray[forloop.index0 }}
+    {% endif %}
+  {% endfor %}
+
+
