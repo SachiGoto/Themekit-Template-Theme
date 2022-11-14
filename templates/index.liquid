@@ -43,6 +43,14 @@ You can however make arrays of strings and numbers as well as array of arrays us
 {%  assign collection = collections['featured-collection]' %}
 {% assign collection2 = collections['example-collection]' %}
 
+{% capture products_list %}
+  {%  for product in collection.products %}
+    {{ product.title }}
+  {%  endfor %}
+{% endcapture %}
 
-{{ collection2 }}
+{% assign products_array = products_list | split: '::' %}
+
+{{ products_array }}
+
 
