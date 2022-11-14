@@ -56,8 +56,10 @@ Best way is to create a collection. Collection is an array with objects inside. 
 {{ products_list }}
 
 {% assign = test = collections['featured-collection']%}
+{% for product in test.products %}
+{{ test.title }}
 
-{{ test }}
+  {% endfor %}
 
 <!-- {% assign products_array = products_list | split: '::' %}
 
