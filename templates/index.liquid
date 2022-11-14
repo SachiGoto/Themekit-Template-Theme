@@ -88,7 +88,7 @@ Best way is to create a collection. Collection is an array with objects inside. 
   {% endfor %}
 
 <h3> Comparison / Creating booleans</h3>
-
+<p> This would't work because you can't pass boolean variables</p>
   {%  assign true_or_false = ("Hello" == "Hello") %}
 
   {%  if true_or_false %}
@@ -96,6 +96,14 @@ Best way is to create a collection. Collection is an array with objects inside. 
   {% else %}
     hello doesn't equl hello?
   {%  endif %}
+
+<p>This works</p>
+   {%  assign true_or_false = false %}
+
+   {% if "Hello" == "Hello" %}
+{%  assign true_or_false = true %}
+     {%  endif %}
+
   
 
   
