@@ -63,8 +63,10 @@ Best way is to create a collection. Collection is an array with objects inside. 
 <!-- {{ products_array }} -->
 
 {% for product in products_array %}
-  {%  assign product_vals = product | split:'::' %}
+  {%  assign product_vals = product | split:'|' %}
+<!--   product title -->
   {{ product_vals[0] }}
+<!--   product description -->
   {{ product_vals[2] }}
 {%  endfor %}
 
