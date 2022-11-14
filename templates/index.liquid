@@ -36,7 +36,8 @@ Full Name: {{ first_name }} {{ last_name }}
 
 
 <!-- Shopify liquid doesn't allow for making Objects, neither can you careate arrays of objects. 
-You can however make arrays of strings and numbers as well as array of arrays using capture and split.  -->
+You can however make arrays of strings and numbers as well as array of arrays using capture and split. 
+Best way is to create a collection. Collection is an array with objects inside. However, there is a workaround without creating collection.  -->
 
 <h2>How to put objects in an array in liquid??</h2>
 
@@ -45,11 +46,15 @@ You can however make arrays of strings and numbers as well as array of arrays us
 
 {% capture products_list %}
   {%  for product in collection.products %}
-    {{ product.title }}
+    {{ product.title }}| {{ product.description }}
+    {%  if forloop.last == false %} :: {% endif %}
   {%  endfor %}
 {% endcapture %}
 
-{% assign products_array = products_list | split: '::' %}
+
+{{ product_list }}
+
+<!-- {% assign products_array = products_list | split: '::' %}
 
 {% for product in products_array %}
   {%  assign product_vals = product | split:'::' %}
@@ -58,6 +63,6 @@ You can however make arrays of strings and numbers as well as array of arrays us
 {%  endfor %}
 
 
-{{ product_vals }}
+{{ product_vals }} -->
 
 
