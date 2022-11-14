@@ -14,6 +14,7 @@ Full Name: {{ first_name }} {{ last_name }}
 
 <h2>2.Substrings</h2>
 
+
 {%  assign youtube_video_url = "https://www.youtube.com/watch?v=PD-dx92RJtg" %}
 
 {%  if youtube_video_url contains 'youtube.com/watch' %}
@@ -25,7 +26,6 @@ Full Name: {{ first_name }} {{ last_name }}
     {%  assign video_id = video_id[1] %}
 {%  endif %}
 
-  PD-dx92RJtg
 
 {{ video_id }}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>>
@@ -35,4 +35,14 @@ Full Name: {{ first_name }} {{ last_name }}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PD-dx92RJtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+<!-- Shopify liquid doesn't allow for making Objects, neither can you careate arrays of objects. 
+You can however make arrays of strings and numbers as well as array of arrays using capture and split.  -->
+
+<h2>How to put objects in an array in liquid??</h2>
+
+{%  assign collection = collections['featured-collection]' %}
+{% assign collection2 = collections['example-collection]' %}
+
+
+{{ collection2 }}
 
