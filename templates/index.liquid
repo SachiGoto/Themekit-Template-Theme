@@ -51,6 +51,13 @@ You can however make arrays of strings and numbers as well as array of arrays us
 
 {% assign products_array = products_list | split: '::' %}
 
-{{ products_list }}
+{% for product in products_array %}
+  {%  assign product_vals = product | split:'::' %}
+  {{ product_vals[0] }}
+  {{ product_vals[2] }}
+{%  endfor %}
+
+
+{{ product_vals }}
 
 
