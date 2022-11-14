@@ -1,3 +1,12 @@
 {{ content_for_index }}
 
-<h1>Hello</h1>
+<h1>String Concatenation</h1>
+
+{%  assign first_name = "Sachi" %}
+{%  assign last_name = "Goto" %}
+// capture containes everything in the capture tag // 
+{% capture full_name %}
+{{ first_name }} {{ last_name }}
+{%  endcapture %}
+
+
