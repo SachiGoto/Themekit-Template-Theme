@@ -22,7 +22,7 @@ Full Name: {{ first_name }} {{ last_name }}
   {% if youtbe_vidoe_url contains '&' %}
     {%  assign video_id = video_id[1] | split : '&' | first %}
 {% else %}
-    {%  assign video_id = video_if[1] %}
+    {%  assign video_id = video_id[1] %}
 {%  endif %}
 
 {{ video_id }}
