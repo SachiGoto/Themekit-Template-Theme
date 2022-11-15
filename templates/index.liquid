@@ -53,7 +53,7 @@ Best way is to create a collection. Collection is an array with objects inside. 
   
 {% endcapture %}
 
-<h3>Product list</h3>
+<h3>3. Product list</h3>
 <!-- {{ products_list }} -->
 
 
@@ -109,6 +109,15 @@ Best way is to create a collection. Collection is an array with objects inside. 
   {% else %}
     hello doesn't equl hello?
   {%  endif %}
+
+
+
+  <h3> 4. Order of operations </h3>
+
+{% assign average_price = 50 | plus:20 | plus:30 | divided_by:3 %}
+
+{{ average_price }}
+  
 
   
 
