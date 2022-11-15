@@ -140,6 +140,14 @@ Best way is to create a collection. Collection is an array with objects inside. 
 {{ page }}
 
 
+{%  if page.title %}
+  <h2>Page title is : {{ page.title }}</h2>
+{%  endif %}
+
+{%  if page %}
+  <h2>Page title is : {{ page.title }}</h2>
+
+{%  endif %}
 <br>
 
 {{ collection }}
