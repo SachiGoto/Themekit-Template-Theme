@@ -154,11 +154,14 @@ Best way is to create a collection. Collection is an array with objects inside. 
 <!-- for title, check if it is blank, for object, check if it is empty -->
 {%  if page.title != blank %}
   <h2>Page title is : {{ page.title }}</h2>
+  {%  else %}
+  <h2>Page title is empty</h2>
 {%  endif %}
 
 {%  if page == empty %}
-  <h2>Page title is : {{ page.title }}</h2>
-
+  <h2>Page is : {{ page.title }}</h2>
+{% else %}
+  <h2> Page is empty </h2>
 {%  endif %}
 
 {{ collection }}
