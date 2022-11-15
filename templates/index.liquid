@@ -112,11 +112,21 @@ Best way is to create a collection. Collection is an array with objects inside. 
 
 <hr>
 
-  <h3> 4. Order of operations </h3>
+  <h3> 4. Order of operations </h3
+<!-- In liquid, each value will be evaluated from left to right. it ignores order of operations  -->
 
 {% assign average_price = 50 | plus:20 | plus:30 | divided_by:3 %}
+{% assign cost =8 | times:2 | plus:20 | minus:5|times:2 %}
 
 {{ average_price }}
+{{ cost }}
+
+<h4>How to write equation following order of operations?</h4>
+
+
+
+
+
   
 
   
