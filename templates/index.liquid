@@ -150,6 +150,17 @@ Best way is to create a collection. Collection is an array with objects inside. 
 {%  endif %}
 <br>
 
+<h4>what is the solution? </h4>
+<!-- for title, check if it is blank, for object, check if it is empty -->
+{%  if page.title != blank %}
+  <h2>Page title is : {{ page.title }}</h2>
+{%  endif %}
+
+{%  if page == empty %}
+  <h2>Page title is : {{ page.title }}</h2>
+
+{%  endif %}
+
 {{ collection }}
 
 
