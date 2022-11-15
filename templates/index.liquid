@@ -159,10 +159,18 @@ Best way is to create a collection. Collection is an array with objects inside. 
 {%  endif %}
 
 {%  if page != empty %}
+
   <h2>Page is : {{ page.title }}</h2>
 {% else %}
   <h2> Page is empty </h2>
 {%  endif %}
+
+<!-- another way of checking if object is empty -->
+
+{% unless page.empty?  %}
+<h2>it is empty</h2>
+
+{%  endunless %}
 
 {{ collection }}
 
