@@ -125,8 +125,8 @@ Best way is to create a collection. Collection is an array with objects inside. 
 
 <!-- // divide calculations in multiple lines -->
 
-{% assign cost_of_shirts =8 | times 2 %}
-{% assign cost_of_shorts = 20 | minus:5 | times 2 %}
+{% assign cost_of_shirts =8 | times: 2 %}
+{% assign cost_of_shorts = 20 | minus:5 | times: 2 %}
 {% assign cost = cost_of_shirts | plus:cost_of_shorts %}
 
 {{ cost }}
