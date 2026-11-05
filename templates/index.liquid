@@ -89,7 +89,7 @@ Best way is to create a collection. Collection is an array with objects inside. 
 
 <h3> Comparison / Creating booleans</h3>
 <p> This would't work because you can't pass boolean variables</p>
-  {%  assign true_or_false = ("Hello" == "Hello") %}
+  {% assign true_or_false = Hello %}
 
   {%  if true_or_false %}
     hello does equal hello!
@@ -199,3 +199,13 @@ Best way is to create a collection. Collection is an array with objects inside. 
   
 
 
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{%  assign true_or_false = ("Hello" == "Hello") %}'
+  to: "{% assign true_or_false = Hello %}"
+  position: 2767..2801
+{% endcomment %}
